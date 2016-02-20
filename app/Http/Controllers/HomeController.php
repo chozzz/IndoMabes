@@ -6,18 +6,21 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Src\Curls\IndoMabesClan as IndoMabesClan;
+use App\Src\Curls\ClashOfClan as ClashOfClan;
 
 class HomeController extends Controller
 {
-	public function __construct(IndoMabesClan $indoMabesClan)
+	public function __construct(ClashOfClan $coc)
 	{
-		$this->indoMabesClan = $indoMabesClan;
+		$this->coc = $coc;
 	}
     //
     public function index()
     {
-    	$members = $this->indoMabesClan->getMembers();
+        $indoMabesClanTag = '#9YGL8Q98';
+    	$members = $this->coc->getClanMembersByClanTag($indoMabesClanTag);
+        //$clans = $this->coc->getClansByClanName('INDO MABES');
+        //dd($clans['items']);
     	//dd($members['items']);
     	return view('pages.home', ['memberItems' => $members['items']]);
     }
