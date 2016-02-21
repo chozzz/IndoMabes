@@ -1,4 +1,4 @@
-<div class="media">
+<div class="media player">
   <div class="media-left">
     <a href="javascript:void(0)">
     	{{ Html::image($player['league']['iconUrls']['tiny'], $player['league']['name'], array('class' => 'media-object')) }}

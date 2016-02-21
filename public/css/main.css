@@ -27,7 +27,19 @@ img.small {
     height: 24px;
 }
 
+.media.clan .media-body .pull-left {
+    margin-top: 10px;
+}
+
+.media.clan .media-body .pull-right {
+    min-width: 80px;
+}
+
 .media:not(:last-child) {
     border-bottom: 1px solid #dedede;
     padding-bottom: 10px;
+}
+
+.form-container {
+    margin-bottom: 10px;
 }

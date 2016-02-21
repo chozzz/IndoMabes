@@ -11,9 +11,25 @@
 |
 */
 Route::get('/', [
-    'as' => '/', 
-    'uses' => 'HomeController@index'
+    'as' => 'home', 
+    'uses' => 'HomeController@getIndex'
 ]);
+
+Route::get('view', [
+    'as' => 'view', 
+    'uses' => 'HomeController@getCustomIndex'
+]);
+
+Route::get('search', [
+    'as' => 'search', 
+    'uses' => 'SearchController@getIndex'
+]);
+
+Route::post('search', [
+    'as' => 'postSearch', 
+    'uses' => 'SearchController@postIndex'
+]);
+
 
 /*
 |--------------------------------------------------------------------------

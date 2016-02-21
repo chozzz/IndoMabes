@@ -18,10 +18,10 @@
                     <a href="javascript:void(0)"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="javascript:void(0)">Home</a>
+                    <a class="page-scroll" href="{{ route('home') }}">Home</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="javascript:void(0)">Search</a>
+                    <a class="page-scroll" href="{{ route('search') }}">Search</a>
                 </li>
             </ul>
         </div>
